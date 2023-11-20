@@ -1,0 +1,6 @@
+#CO1 PRGRM 18
+#MERGE TWO DICTIONARY
+dict1={1:'A',2:'B',3:'C'}
+dict2={4:'D',5:'E',6:'F'}
+dict1.update(dict2)
+print(dict1)
