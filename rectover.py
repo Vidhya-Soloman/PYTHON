@@ -1,18 +1,24 @@
-#RECTANGLE CLASS WITH OPERATOR OVERLOADING
+#USING FUNCTION FOR DIFFERENT FORMS
 class Rectangle:
- def __init__(self,l,b): 
-  self.l=l;
-  self.b=b;
+ def __init__(self,length,width):
+  self.__length=length
+  self.__width=width
  def area(self):
-  return self.l*self.b
+  area=self.__length*self.__width
+  return area
  def __lt__(self,other):
   return self.area()<other.area()
-obj1=Rectangle(2,3)
-obj2=Rectangle(3,4)
-print("area 1=",obj1.area())
-print("area 2=",obj2.area())
-if(obj1<obj2):
- print("Rectangle 2 is greater")
+rect1=Rectangle(2,3)
+rect2=Rectangle(3,9)
+print("area of rect 1",rect1.area())
+print("area of rect 2",rect2.area())
+
+
+#OPERATORS ARE USED FOR MANY THINGS 
+#TO COMPARE TO OBJECTS OPERATOR OVERLOADING IS REQUIRED
+#WITHOUT USING OPERATOR OVERLOADING METHODS(__ADD__,__LT__) OBJECTS CANNOT BE COMPARED
+
+if (rect1<rect2):
+ print("rect 2 is greater")
 else:
- print("Rectangle 1 is greater")
- 
+ print("rect 1 is greater")
